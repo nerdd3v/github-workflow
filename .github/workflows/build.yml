@@ -1,0 +1,16 @@
+name: build script
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the repo
+        uses: actions/checkout@v7
+      
+      - name: create a file
+        run: echo "hek" > a.txt
